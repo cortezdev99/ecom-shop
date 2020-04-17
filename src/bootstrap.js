@@ -14,7 +14,9 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <App />
+        <App>
+          
+        </App>
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
