@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import App from "./components/app";
 import reducers from "./reducers";
 
@@ -16,7 +16,7 @@ import Signup from './components/auth/Signup'
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <BrowserRouter history={history}>
+      <Router history={history}>
         <App>
           <Switch>
             <Route exact path="/" component={Signin}/>
@@ -24,7 +24,7 @@ function main() {
             <Route path="/signup" component={Signup}/>
           </Switch>
         </App>
-      </BrowserRouter>
+      </Router>
     </Provider>,
     document.querySelector(".app-wrapper")
   );
