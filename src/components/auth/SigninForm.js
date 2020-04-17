@@ -26,6 +26,8 @@ class SigninForm extends Component {
           component={FormInput}
         />
 
+        <div className='sign-in-form__line' />
+        
         <Field
           className='sign-in-form__login'
           name='login'
