@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import history from '../../history'
+
 class Header extends Component {
   render() {
     const { headerLinks } = this.props
@@ -11,8 +13,8 @@ class Header extends Component {
           {
             headerLinks.map(link => {
               return  (
-                <a className='header__link' key={link._id} onClick={() => console.log('trying to switch tabs')}>
-                  {link}
+                <a className='header__link' key={link._id} onClick={() => history.push(link.path)}>
+                  {link.title}
                 </a>
               )
             })
