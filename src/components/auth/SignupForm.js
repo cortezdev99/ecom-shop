@@ -8,21 +8,18 @@ import history from '../../history'
 class SignupForm extends Component {
   render() {
     const { className, handleSubmit } = this.props
-    const links = [
+    const requires = [
       {
         _id: 0,
-        title: 'Not Registered? Create account here',
-        onClick: () => history.push('/signup')
+        title: 'At least 6 characters',
       },
       {
         _id: 1,
-        title: 'Forgot account email?',
-        onClick: () => console.log('forgot email')
+        title: 'At least one number',
       },
       {
         _id: 2,
-        title: 'Forgot password?',
-        onClick: () => console.log('forgot password')
+        title: 'At least one symbol',
       }
     ]
     return (
@@ -55,7 +52,7 @@ class SignupForm extends Component {
         />
 
         <Field
-          className='sign-up-form__confirm-password'
+          className='sign-up-form__confirm'
           name='confirm'
           type='password'
           title='Confirm Password'
@@ -69,8 +66,8 @@ class SignupForm extends Component {
           className='sign-up-form__login'
           name='login'
           type='submit'
-          title='Login'
-          onClick={() => console.log('tryna submit')}
+          title='Create Account'
+          onClick={() => history.push('/account')}
           component={FormButton}
         />
         <Field
@@ -79,10 +76,10 @@ class SignupForm extends Component {
           name='back'
           type='button'
           title='Back'
-          onClick={() => console.log('tryna go back')}
+          onClick={() => history.push('/signin')}
           component={FormButton}
         />
-        <Details className="sign-up-form__details" title='QuickLinks' links={links} />
+        <Details className="sign-up-form__details" title='Password Requirements' requires={requires} />
       </form>
     )
   }
