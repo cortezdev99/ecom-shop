@@ -11,8 +11,8 @@ class Header extends Component {
           {
             headerLinks.map(link => {
               return  (
-                <a className='header__link' key={link.id} onClick={() => console.log('trying to switch tabs')}>
-                  {link.title}
+                <a className='header__link' key={link._id} onClick={() => console.log('trying to switch tabs')}>
+                  {link}
                 </a>
               )
             })
