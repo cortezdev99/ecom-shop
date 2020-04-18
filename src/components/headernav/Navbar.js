@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import * as actions from '../../actions'
+
 class Navbar extends Component {
   render() {
     const { navbarLinks } = this.props 
@@ -9,7 +11,7 @@ class Navbar extends Component {
         {
           navbarLinks.map(link => {
             return  (
-              <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={link._id} onClick={() => console.log('trying to switch tabs')}>
+              <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={link._id} onClick={() => this.props.changeNavbarActive(link._id)}>
                 {link.title}
               </a>
             )
@@ -27,4 +29,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Navbar)
+export default connect(mapStateToProps, actions)(Navbar)
