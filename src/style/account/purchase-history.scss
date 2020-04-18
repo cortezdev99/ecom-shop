@@ -1,8 +1,19 @@
 .purchase-history {
-  grid-row: content-s/content-e;
-  grid-column: s/e;
+  
 
-  // &__page-tile {
+  &__page-title {
+    border-bottom: 1px solid #CCCCCC;
+  }
 
-  // }
+  &__border-bottom {
+    border-bottom: 1px solid #F2F2F2;
+  }
+}
+
+.purchases {
+
+}
+
+.purchase-detail {
+
 }
