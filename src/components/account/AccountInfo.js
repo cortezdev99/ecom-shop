@@ -13,7 +13,7 @@ class AccountInfo extends Component {
     return (
       <div className="account-information">
         <PageTitle className='account-information' title='Account Information' />
-        <AccountInfoForm onSubmit={this.onSubmit} className="account-info__form" />
+        <AccountInfoForm onSubmit={this.onSubmit} className="account-information__form" />
       </div>
     )
   }
