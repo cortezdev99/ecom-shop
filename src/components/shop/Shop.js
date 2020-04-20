@@ -26,18 +26,36 @@ class Shop extends Component {
   }
 
   render() {
+    const { filteredProducts } = this.props
     return (
       <div className='shop'>
+        <div className='shop__products'>
+          {
+              filteredProducts.map(product => {
+                return (
+                  <div className='shop-product' key={product._id}>
+                    <div className='shop-product__title'>
+                      {product.title}
+                    </div>
 
+                    <div className='shop-product__description'>
+                      {product.description}
+                    </div>
+                  </div>
+                )
+              })
+          }
+        </div>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  const{ categories } = state.shop
+  const{ categories, filteredProducts } = state.shop
   return {
-    categories
+    categories,
+    filteredProducts
   }
 }
 
