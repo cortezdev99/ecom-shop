@@ -20,9 +20,6 @@
 }
 
 .shop-cart {
-  &__toggle {
-    
-  }
   &__content {
     height: 675px;
     width: 520px;
@@ -60,6 +57,7 @@
     grid-row: products-s/products-e;
     display: grid;
     overflow-y: scroll;
+    row-gap: 45px;
 
     &::-webkit-scrollbar {
       color: #333333;
