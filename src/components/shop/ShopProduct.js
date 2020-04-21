@@ -10,10 +10,8 @@ class ShopProduct extends Component {
     return (
       <div className='shop-product'>
         <div className="shop-product__front">
-          <img src='http://via.placeholder.com/220x220' className="shop-product__front__img" />
-          <div className='shop-product__front__title'>
-            {title}
-          </div>
+          <img src='http://via.placeholder.com/220/220' />
+          <div className='shop-product__front__title'>{title}</div>
         </div>
         <div className="shop-product__back">
           <div className='shop-product__back__title'>
