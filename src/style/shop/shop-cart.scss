@@ -56,3 +56,26 @@
     display: grid;
   }
 }
+
+.cart-footer {
+
+  &__checkout {
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: #00CB79;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:active {
+      transform: scaleX(0.97);
+    }
+  }
+}
