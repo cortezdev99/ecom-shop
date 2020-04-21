@@ -6,15 +6,19 @@
   grid-template-columns: [s image-s] 130px [image-e] 34px [title-s quantity-s] 1fr [quantity-e] 20px [remove-s] 1fr [remove-e title-e price-s] 70px [price-e e];
   align-items: flex-end;
 
+  &__image {
+    grid-row: s/e;
+    grid-column: image-s/image-e;
+  }
+
   &__title {
     grid-row: s/m;
     grid-column: title-s/title-e;
     align-self: flex-start;
-  }
 
-  &__image {
-    grid-row: s/e;
-    grid-column: image-s/image-e;
+    font-size: 18px;
+    font-family: 'Encode Sans Condensed Web';
+    color: #E6E6E6;
   }
 
   &__quantity {
@@ -30,6 +34,8 @@
     grid-row: m/e;
     grid-column: remove-s/remove-e;
     justify-self: flex-start;
+    font-size: 14px;
+    text-decoration-line: underline;
   }
 
   &__price {

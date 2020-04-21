@@ -43,7 +43,6 @@ class Shop extends Component {
 
   render() {
     const { filteredProducts } = this.props
-    return <ShopCart className='shop__cart' />
 
     return (
        <div className='shop'>
