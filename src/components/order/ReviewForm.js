@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
-
 import { FormButton } from '../FormFields'
+
 import history from '../../history'
+import ReviewProducts from './ReviewProducts'
 
 class ReviewForm extends Component {
   render() {
     const { className, handleSubmit } = this.props
     return (
       <form className={`${className} review-form`} onSubmit={handleSubmit}>
+
+        <ReviewProducts className='review-form__products' />
+
         <div className='review-form__line' />
 
         <Field
