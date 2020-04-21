@@ -3,12 +3,16 @@ import React, { Component } from 'react'
 
 import Quantity from '../quantity'
 import GreenPriceTag from '../GreenPriceTag'
+import * as actions from '../../actions'
+import { connect } from 'react-redux'
 
 class ShopProduct extends Component {
 
   handleAddToCart = () => {
     if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
       document.getElementById('shop-cart').classList.remove('cart-hidden')
+      const {_id, title, description, price, belongsTo} = this.props
+      this.props.addCartProduct({_id, title, description, price, belongsTo});
     } else {
       document.getElementById('shop-cart').classList.add('cart-hidden')
     }
@@ -41,4 +45,4 @@ class ShopProduct extends Component {
   }
 }
 
-export default ShopProduct
+export default connect(null, actions)(ShopProduct)
