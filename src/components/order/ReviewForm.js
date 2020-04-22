@@ -27,7 +27,7 @@ class ReviewForm extends Component {
           name='proceed'
           type='submit'
           title='Proceed to Checkout'
-          onClick={() => history.push('/signin')}
+          onClick={() => history.push('/information/shipping')}
           component={FormButton}
         />
 
