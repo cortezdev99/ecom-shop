@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form'
 
 import { FormInput, FormButton } from '../FormFields'
 import history from '../../history'
+import OrderSummary from './OrderSummary'
 
 class ShippingForm extends Component {
   render() {
@@ -74,6 +75,8 @@ class ShippingForm extends Component {
           onClick={() => history.push('/signin')}
           component={FormButton}
         />
+
+        <OrderSummary className='shipping-form__summary' />
       </form>
     )
   }
