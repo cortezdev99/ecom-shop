@@ -31,6 +31,14 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(process.env.REACT_APP_API_KEY)
+  console.log(process.env.REACT_APP_AUTHDOMAIN)
+  console.log(process.env.REACT_APP_DATABASEURL)
+  console.log(process.env.REACT_APP_PROJECTID)
+  console.log(process.env.REACT_APP_STORAGEBUCKET)
+  console.log(process.env.REACT_APP_MESSAGING_SENDER_ID)
+  console.log(process.env.REACT_APP_APP_ID)
+  console.log(process.env.REACT_APP_MEASUREMENT_ID)
   const { navbarLinks, onClick } = state.headerNavbar
   return {
     navbarLinks,
