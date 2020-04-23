@@ -3,17 +3,15 @@ import 'firebase/firestore'
 import 'firebase/auth'
 import 'firebase/functions'
 
-export var firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASEURL,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID
-}
-
+var firebaseConfig = {
+  apiKey: "AIzaSyCwFduCvFm33wpGQJ-dvFwjk8rlKFAN_aM",
+  authDomain: "ecom-ff2e5.firebaseapp.com",
+  databaseURL: "https://ecom-ff2e5.firebaseio.com",
+  projectId: "ecom-ff2e5",
+  storageBucket: "ecom-ff2e5.appspot.com",
+  messagingSenderId: "567355573580",
+  appId: "1:567355573580:web:93b1fb941a8761fd257be9",
+  measurementId: "G-2B7FNVBQME"
+};
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-export default firebase;
